@@ -6,6 +6,15 @@ class Car {
   }
 }
 
+class SUV extends Car {
+  constructor(doors, engine, color) {
+    super(doors, engine, color)
+    this.wheels = 4
+  }
+}
+
 const bmw = new Car(4, 'V8', 'brown')
 
-console.log(bmw)
+const cx5 = new SUV(4, 'V9', 'white')
+
+console.log(cx5)
