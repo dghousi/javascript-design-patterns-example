@@ -1,9 +1,11 @@
-const calc = () => {
-  return 4 * 7
+class Car {
+  constructor(doors, engine, color) {
+    this.doors = doors
+    this.engine = engine
+    this.color = color
+  }
 }
 
-const printCalc = callback => {
-  console.log(callback())
-}
+const bmw = new Car(4, 'V8', 'brown')
 
-printCalc(calc)
+console.log(bmw)
