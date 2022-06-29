@@ -6,15 +6,21 @@ class Car {
   }
 }
 
-class SUV extends Car {
-  constructor(doors, engine, color) {
-    super(doors, engine, color)
-    this.wheels = 4
+class carFactory {
+  createCar(type) {
+    switch (type) {
+      case 'bmw':
+        return new Car(4, 'V7', 'black')
+      case 'cx5':
+        return new Car(4, 'v3', 'red')
+      default:
+        break
+    }
   }
 }
 
-const bmw = new Car(4, 'V8', 'brown')
+const factory = new carFactory()
+const bmw = factory.createCar('bmw')
+const cx5 = factory.createCar('cx5')
 
-const cx5 = new SUV(4, 'V9', 'white')
-
-console.log(cx5)
+console.log(bmw, cx5)
