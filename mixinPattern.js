@@ -9,16 +9,16 @@ let sayHiMixin = {
 }
 
 // usage:
-class User {
+class SystemUser {
   constructor(name) {
     this.name = name
   }
 }
 
-console.log(User.prototype)
+console.log(SystemUser.prototype)
 // copy the methods
-Object.assign(User.prototype, sayHiMixin)
+Object.assign(SystemUser.prototype, sayHiMixin)
 
-// now User can say hi
-new User('Dude').sayHi() // Hello Dude!
-new User('Dude').sayBye()
+// now SystemUser can say hi
+new SystemUser('Dude').sayHi() // Hello Dude!
+new SystemUser('Dude').sayBye()
